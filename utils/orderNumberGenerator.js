@@ -1,4 +1,5 @@
 const crypto = require('crypto');
+const Order = require('../models/Order');
 
 /**
  * Order number generator utility
@@ -18,6 +19,34 @@ const generateDateBasedOrderNumber = (sequence = 1) => {
   const sequenceStr = String(sequence).padStart(5, '0');
 
   return `${datePrefix}-${sequenceStr}`;
+};
+
+/**
+ * Generate CMM order number (CashMyMobile format)
+ * Format: CMM1001, CMM1002, etc.
+ */
+const generateCMMOrderNumber = async () => {
+  try {
+    // Find the last order number starting with CMM
+    const lastOrder = await Order.findOne({
+      orderNumber: /^CMM\d+$/,
+    })
+      .sort({ createdAt: -1 })
+      .select('orderNumber');
+
+    let nextNumber = 1001; // Starting number
+    if (lastOrder && lastOrder.orderNumber) {
+      const lastNumber = parseInt(lastOrder.orderNumber.replace('CMM', ''));
+      nextNumber = lastNumber + 1;
+    }
+
+    return `CMM${nextNumber}`;
+  } catch (error) {
+    console.error('Error generating CMM order number:', error);
+    // Fallback to random if database query fails
+    const random = Math.floor(1001 + Math.random() * 8999);
+    return `CMM${random}`;
+  }
 };
 
 /**
@@ -133,6 +162,7 @@ const generateNextOrderNumber = (lastOrderNumber) => {
 };
 
 module.exports = {
+  generateCMMOrderNumber,
   generateDateBasedOrderNumber,
   generateRandomOrderNumber,
   generateUUIDOrderNumber,

@@ -171,7 +171,10 @@ const sendOTP = async (email, otp) => {
  */
 const sendOrderConfirmation = async (order) => {
   try {
-    if (!order.customerEmail) return;
+    if (!order.customerEmail) {
+      logger.warn(`No customer email for order ${order.orderNumber}, skipping confirmation email`);
+      return;
+    }
 
     const template = await loadTemplate('orderReceived');
     const html = replaceTemplateVars(template, {
@@ -201,8 +204,9 @@ const sendOrderConfirmation = async (order) => {
 
     logger.info(`Order confirmation with PDF invoice sent for ${order.orderNumber}`);
   } catch (error) {
-    logger.error(`Error sending order confirmation:`, error.message);
-    throw error;
+    logger.error(`Error sending order confirmation for ${order.orderNumber}:`, error.message);
+    logger.error('Stack trace:', error.stack);
+    // Don't throw - allow order creation to succeed even if email fails
   }
 };
 
@@ -258,9 +262,13 @@ const sendContactConfirmation = async (submission) => {
     const template = await loadTemplate('contactConfirmation');
     const html = replaceTemplateVars(template, {
       name: submission.name,
+      email: submission.email,
+      phone: submission.phone || 'Not provided',
       subject: submission.subject,
       message: submission.message,
       companyName: 'CashMyMobile',
+      supportEmail: process.env.SUPPORT_EMAIL || 'Support@cashmymobile.co.uk',
+      supportPhone: process.env.SUPPORT_PHONE || '03332244018',
     });
 
     await sendEmail({

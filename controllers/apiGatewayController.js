@@ -5,7 +5,7 @@ const Device = require('../models/Device');
 const Pricing = require('../models/Pricing');
 const { HTTP_STATUS, ERROR_MESSAGES, ORDER_STATUSES } = require('../config/constants');
 const { successResponse, errorResponse } = require('../utils/apiResponse');
-const { generateRandomOrderNumber: generateOrderNumber } = require('../utils/orderNumberGenerator');
+const { generateCMMOrderNumber: generateOrderNumber } = require('../utils/orderNumberGenerator');
 const emailService = require('../services/emailService');
 const logger = require('../utils/logger');
 
@@ -121,7 +121,7 @@ exports.createExternalOrder = async (req, res) => {
 
     // Create order
     const orderData = {
-      orderNumber: generateOrderNumber(),
+      orderNumber: await generateOrderNumber(),
       source: 'API',
       status: 'PENDING', // Uses first status from order status utilities
       customerName: customer_name,

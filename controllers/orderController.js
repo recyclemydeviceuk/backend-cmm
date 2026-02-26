@@ -4,7 +4,7 @@ const emailService = require('../services/emailService');
 const { HTTP_STATUS, ERROR_MESSAGES, ORDER_STATUSES } = require('../config/constants');
 const { successResponse, errorResponse } = require('../utils/apiResponse');
 const logger = require('../utils/logger');
-const { generateRandomOrderNumber: generateOrderNumber } = require('../utils/orderNumberGenerator');
+const { generateCMMOrderNumber: generateOrderNumber } = require('../utils/orderNumberGenerator');
 
 /**
  * @desc    Get all orders with filters
@@ -109,7 +109,7 @@ exports.createOrder = async (req, res) => {
   try {
     const orderData = {
       ...req.body,
-      orderNumber: generateOrderNumber(),
+      orderNumber: await generateOrderNumber(),
       source: 'WEBSITE',
       status: 'PENDING',
     };
@@ -117,6 +117,11 @@ exports.createOrder = async (req, res) => {
     const order = await Order.create(orderData);
 
     logger.info(`Order created: ${order.orderNumber}`);
+
+    // Send confirmation email if email provided
+    if (order.customerEmail) {
+      await emailService.sendOrderConfirmation(order);
+    }
 
     return successResponse(
       res,

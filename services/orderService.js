@@ -3,30 +3,30 @@ const logger = require('../utils/logger');
 
 /**
  * Generate unique order number
- * Format: ORD-YYYYMMDD-XXXXX
+ * Format: CMM1001, CMM1002, etc.
  */
 const generateOrderNumber = async () => {
-  const date = new Date();
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
-  const datePrefix = `ORD-${year}${month}${day}`;
+  try {
+    // Find the last order number starting with CMM
+    const lastOrder = await Order.findOne({
+      orderNumber: /^CMM\d+$/,
+    })
+      .sort({ createdAt: -1 })
+      .select('orderNumber');
 
-  // Find the last order number for today
-  const lastOrder = await Order.findOne({
-    orderNumber: new RegExp(`^${datePrefix}`),
-  })
-    .sort({ createdAt: -1 })
-    .select('orderNumber');
+    let nextNumber = 1001; // Starting number
+    if (lastOrder && lastOrder.orderNumber) {
+      const lastNumber = parseInt(lastOrder.orderNumber.replace('CMM', ''));
+      nextNumber = lastNumber + 1;
+    }
 
-  let sequence = 1;
-  if (lastOrder) {
-    const lastSequence = parseInt(lastOrder.orderNumber.split('-')[2]);
-    sequence = lastSequence + 1;
+    return `CMM${nextNumber}`;
+  } catch (error) {
+    logger.error(`Error generating CMM order number: ${error.message}`);
+    // Fallback to random if database query fails
+    const random = Math.floor(1001 + Math.random() * 8999);
+    return `CMM${random}`;
   }
-
-  const orderNumber = `${datePrefix}-${String(sequence).padStart(5, '0')}`;
-  return orderNumber;
 };
 
 /**

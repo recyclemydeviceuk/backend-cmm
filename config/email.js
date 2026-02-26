@@ -1,7 +1,7 @@
 const path = require('path');
 
 const emailConfig = {
-  from: process.env.AWS_SES_FROM_EMAIL || 'mailer@zennara.in',
+  from: process.env.AWS_SES_FROM_EMAIL || 'noreply@cashmymobile.co.uk',
   replyTo: process.env.AWS_SES_VERIFIED_EMAIL || 'admin@recyclemydevice.com',
   
   // Email templates directory
