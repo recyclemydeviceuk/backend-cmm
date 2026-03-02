@@ -14,6 +14,7 @@ const dashboardRoutes = require('./dashboard.routes');
 const contactRoutes = require('./contact.routes');
 const uploadRoutes = require('./upload.routes');
 const exportRoutes = require('./export.routes');
+const counterOfferRoutes = require('./counterOffer.routes');
 
 // Mount routes
 router.use('/auth', authRoutes);
@@ -28,6 +29,7 @@ router.use('/dashboard', dashboardRoutes);
 router.use('/contact', contactRoutes);
 router.use('/upload', uploadRoutes);
 router.use('/export', exportRoutes);
+router.use('/counter-offers', counterOfferRoutes);
 
 // Health check route
 router.get('/health', (req, res) => {
@@ -56,6 +58,7 @@ router.get('/', (req, res) => {
       dashboard: '/api/dashboard',
       contact: '/api/contact',
       upload: '/api/upload',
+      counterOffers: '/api/counter-offers',
       export: '/api/export',
     },
   });

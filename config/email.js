@@ -10,7 +10,7 @@ const emailConfig = {
   // Template mappings
   templates: {
     otp: {
-      subject: 'Your Admin Login OTP - CashMyMobile',
+      subject: 'Admin OTP - CashMyMobile',
       template: 'otpEmail.html',
     },
     orderReceived: {
@@ -49,6 +49,18 @@ const emailConfig = {
       subject: 'We Received Your Message - CashMyMobile',
       template: 'contactConfirmation.html',
     },
+    counterOfferReceived: {
+      subject: 'Counter Offer for Your Device - CashMyMobile',
+      template: 'counterOfferReceived.html',
+    },
+    counterOfferAccepted: {
+      subject: 'Counter Offer Accepted - CashMyMobile',
+      template: 'counterOfferAccepted.html',
+    },
+    counterOfferDeclined: {
+      subject: 'Counter Offer Declined - CashMyMobile',
+      template: 'counterOfferDeclined.html',
+    },
   },
   
   // Email content defaults
@@ -56,7 +68,7 @@ const emailConfig = {
     companyName: 'CashMyMobile',
     websiteUrl: process.env.FRONTEND_URL || 'http://localhost:5173',
     supportEmail: 'Support@cashmymobile.co.uk',
-    supportPhone: '03332244018',
+    supportPhone: '03333356679',
     logoUrl: 'https://res.cloudinary.com/dn2sab6qc/image/upload/v1771700003/Cashmymobile_logo_y7ndez.png',
   },
 };

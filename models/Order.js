@@ -70,6 +70,20 @@ const orderSchema = new mongoose.Schema(
       type: Number,
       min: 0,
     },
+    counterOffer: {
+      hasCounterOffer: {
+        type: Boolean,
+        default: false,
+      },
+      latestOfferId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'CounterOffer',
+      },
+      status: {
+        type: String,
+        enum: ['PENDING', 'ACCEPTED', 'DECLINED'],
+      },
+    },
     postageMethod: {
       type: String,
       enum: ['label', 'postbag'],

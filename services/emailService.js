@@ -386,6 +386,103 @@ const sendOrderCompletionEmail = async (order) => {
   }
 };
 
+/**
+ * Send counter offer email to customer
+ */
+const sendCounterOfferEmail = async (order, counterOffer) => {
+  try {
+    if (!order.customerEmail) {
+      logger.warn(`No customer email for order ${order.orderNumber}, skipping counter offer email`);
+      return;
+    }
+
+    const template = await loadTemplate('counterOfferReceived');
+    const reviewUrl = `${emailConfig.defaults.websiteUrl}/counter-offer/${counterOffer.reviewToken}`;
+    const expiryDate = new Date(counterOffer.expiresAt).toLocaleDateString('en-GB', { 
+      day: 'numeric', 
+      month: 'long', 
+      year: 'numeric' 
+    });
+
+    const html = replaceTemplateVars(template, {
+      customerName: order.customerName,
+      orderNumber: order.orderNumber,
+      originalPrice: order.offeredPrice.toFixed(2),
+      revisedPrice: counterOffer.revisedPrice.toFixed(2),
+      reason: counterOffer.reason,
+      reviewUrl,
+      expiryDate,
+      supportEmail: emailConfig.defaults.supportEmail,
+      deviceImages: counterOffer.deviceImages?.length > 0 ? 'yes' : '',
+    });
+
+    await sendEmail({
+      to: order.customerEmail,
+      subject: `Counter Offer for Your Device - Order #${order.orderNumber}`,
+      html,
+    });
+
+    logger.info(`Counter offer email sent for order ${order.orderNumber}`);
+  } catch (error) {
+    logger.error(`Error sending counter offer email for ${order.orderNumber}:`, error.message);
+    // Don't throw - allow counter offer creation to succeed even if email fails
+  }
+};
+
+/**
+ * Send counter offer accepted confirmation email
+ */
+const sendCounterOfferAcceptedEmail = async (order, counterOffer) => {
+  try {
+    if (!order.customerEmail) return;
+
+    const template = await loadTemplate('counterOfferAccepted');
+    const html = replaceTemplateVars(template, {
+      customerName: order.customerName,
+      orderNumber: order.orderNumber,
+      revisedPrice: counterOffer.revisedPrice.toFixed(2),
+      supportEmail: emailConfig.defaults.supportEmail,
+    });
+
+    await sendEmail({
+      to: order.customerEmail,
+      subject: `Counter Offer Accepted - Order #${order.orderNumber}`,
+      html,
+    });
+
+    logger.info(`Counter offer accepted email sent for order ${order.orderNumber}`);
+  } catch (error) {
+    logger.error(`Error sending counter offer accepted email:`, error.message);
+  }
+};
+
+/**
+ * Send counter offer declined confirmation email
+ */
+const sendCounterOfferDeclinedEmail = async (order, counterOffer) => {
+  try {
+    if (!order.customerEmail) return;
+
+    const template = await loadTemplate('counterOfferDeclined');
+    const html = replaceTemplateVars(template, {
+      customerName: order.customerName,
+      orderNumber: order.orderNumber,
+      revisedPrice: counterOffer.revisedPrice.toFixed(2),
+      supportEmail: emailConfig.defaults.supportEmail,
+    });
+
+    await sendEmail({
+      to: order.customerEmail,
+      subject: `Counter Offer Declined - Order #${order.orderNumber}`,
+      html,
+    });
+
+    logger.info(`Counter offer declined email sent for order ${order.orderNumber}`);
+  } catch (error) {
+    logger.error(`Error sending counter offer declined email:`, error.message);
+  }
+};
+
 module.exports = {
   sendEmail,
   sendRawEmail,
@@ -396,4 +493,7 @@ module.exports = {
   sendPaymentConfirmation,
   sendPriceRevisionEmail,
   sendOrderCompletionEmail,
+  sendCounterOfferEmail,
+  sendCounterOfferAcceptedEmail,
+  sendCounterOfferDeclinedEmail,
 };

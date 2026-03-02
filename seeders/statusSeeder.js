@@ -14,12 +14,14 @@ async function seed() {
   await PaymentStatus.deleteMany({});
 
   const orderStatuses = [
-    { name: 'Pending',      value: 'PENDING',      color: 'bg-gray-100 text-gray-700',     sortOrder: 1, isActive: true },
-    { name: 'Confirmed',    value: 'CONFIRMED',    color: 'bg-blue-100 text-blue-700',     sortOrder: 2, isActive: true },
-    { name: 'Collected',    value: 'COLLECTED',    color: 'bg-purple-100 text-purple-700', sortOrder: 3, isActive: true },
-    { name: 'Under Review', value: 'UNDER_REVIEW', color: 'bg-yellow-100 text-yellow-700', sortOrder: 4, isActive: true },
-    { name: 'Completed',    value: 'COMPLETED',    color: 'bg-emerald-100 text-emerald-700', sortOrder: 5, isActive: true },
-    { name: 'Cancelled',    value: 'CANCELLED',    color: 'bg-red-100 text-red-700',       sortOrder: 6, isActive: true },
+    { name: 'Pending',               value: 'PENDING',               color: 'bg-gray-100 text-gray-700',     sortOrder: 1, isActive: true },
+    { name: 'Confirmed',             value: 'CONFIRMED',             color: 'bg-blue-100 text-blue-700',     sortOrder: 2, isActive: true },
+    { name: 'Collected',             value: 'COLLECTED',             color: 'bg-purple-100 text-purple-700', sortOrder: 3, isActive: true },
+    { name: 'Under Review',          value: 'UNDER_REVIEW',          color: 'bg-yellow-100 text-yellow-700', sortOrder: 4, isActive: true },
+    { name: 'Counter Offer Pending', value: 'COUNTER_OFFER_PENDING', color: 'bg-amber-100 text-amber-700',   sortOrder: 5, isActive: true },
+    { name: 'Counter Offer Accepted',value: 'COUNTER_OFFER_ACCEPTED',color: 'bg-green-100 text-green-700',   sortOrder: 6, isActive: true },
+    { name: 'Completed',             value: 'COMPLETED',             color: 'bg-emerald-100 text-emerald-700', sortOrder: 7, isActive: true },
+    { name: 'Cancelled',             value: 'CANCELLED',             color: 'bg-red-100 text-red-700',       sortOrder: 8, isActive: true },
   ];
 
   const paymentStatuses = [

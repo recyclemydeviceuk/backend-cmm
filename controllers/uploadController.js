@@ -21,10 +21,8 @@ exports.uploadImage = async (req, res) => {
     }
 
     // Upload to S3
-    const imageUrl = await s3Service.uploadFile(
-      req.file.path,
-      `devices/${Date.now()}_${req.file.originalname}`
-    );
+    const key = `devices/${Date.now()}_${req.file.originalname}`;
+    const imageUrl = await s3Service.uploadFile(req.file.path, key);
 
     // Delete local file
     await fs.unlink(req.file.path);
@@ -36,6 +34,7 @@ exports.uploadImage = async (req, res) => {
       {
         message: 'Image uploaded successfully',
         imageUrl,
+        key,
       },
       HTTP_STATUS.OK
     );
