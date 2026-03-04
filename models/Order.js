@@ -120,6 +120,11 @@ const orderSchema = new mongoose.Schema(
       type: String,
       trim: true,
     },
+    partnerName: {
+      type: String,
+      trim: true,
+      default: null,
+    },
     notes: {
       type: String,
     },

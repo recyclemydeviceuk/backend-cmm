@@ -1,0 +1,470 @@
+[
+  {
+    "id": "69a05f5bd26af1cd95b297a0",
+    "name": "iPhone 11",
+    "fullName": "Apple iPhone 11",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772117844351_1dbbb866-d798-4cb9-b72e-ac0cee641d0b-1_07468a90-6063-4acf-86eb-67a5dc9b5a19-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a06025d26af1cd95b2980a",
+    "name": "iPhone 11 Pro",
+    "fullName": "Apple iPhone 11 Pro",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118034019_57a443a0-5117-4d98-9147-19161f6e99c3-1_e0c0ce88-ff45-475b-9261-210a7cd533c9-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0606dd26af1cd95b2983a",
+    "name": "iPhone 11 Pro Max",
+    "fullName": "Apple iPhone 11 Pro Max",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118117540_57a443a0-5117-4d98-9147-19161f6e99c3-1_e0c0ce88-ff45-475b-9261-210a7cd533c9-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a06094d26af1cd95b2986a",
+    "name": "iPhone 12",
+    "fullName": "Apple iPhone 12",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118161649_Iphone-12-1.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a06130d26af1cd95b298fa",
+    "name": "iPhone 12 Pro",
+    "fullName": "Apple iPhone 12 Pro",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118300029_Iphone-12-Pro-Max-1-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a06169d26af1cd95b2993d",
+    "name": "iPhone 12 Pro Max",
+    "fullName": "Apple iPhone 12 Pro Max",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118353826_Iphone-12-Pro-Max-1-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a060c8d26af1cd95b2989a",
+    "name": "iPhone 12 mini",
+    "fullName": "Apple iPhone 12 mini",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118179995_Iphone-12-1.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0618ed26af1cd95b2996d",
+    "name": "iPhone 13",
+    "fullName": "Apple iPhone 13",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118392426_Iphone-13-1-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a061fad26af1cd95b299cd",
+    "name": "iPhone 13 Pro",
+    "fullName": "Apple iPhone 13 Pro",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118520495_Iphone-13-Pro-1-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0622bd26af1cd95b299fd",
+    "name": "iPhone 13 Pro Max",
+    "fullName": "Apple iPhone 13 Pro Max",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118564611_Iphone-13-Pro-Max-1.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a061cad26af1cd95b2999d",
+    "name": "iPhone 13 mini",
+    "fullName": "Apple iPhone 13 mini",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118431150_Iphone-13-Mini-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a06260d26af1cd95b29a2d",
+    "name": "iPhone 14",
+    "fullName": "Apple iPhone 14",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118620556_Iphone-14.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a062a9d26af1cd95b29a74",
+    "name": "iPhone 14 Plus",
+    "fullName": "Apple iPhone 14 Plus",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118676245_Iphone-14-Plus.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0630cd26af1cd95b29aa4",
+    "name": "iPhone 14 Pro",
+    "fullName": "Apple iPhone 14 Pro",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118839466_Iphone-14-pro-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a06368d26af1cd95b29aed",
+    "name": "iPhone 14 Pro Max",
+    "fullName": "Apple iPhone 14 Pro Max",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772118866290_Iphone-14-pro-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0646fd26af1cd95b29b30",
+    "name": "iPhone 15",
+    "fullName": "Apple iPhone 15",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119146312_Iphone-15.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a064a2d26af1cd95b29b60",
+    "name": "iPhone 15 Plus",
+    "fullName": "Apple iPhone 15 Plus",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119178979_Iphone-15-Plus.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a064d3d26af1cd95b29b90",
+    "name": "iPhone 15 Pro",
+    "fullName": "Apple iPhone 15 Pro",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119248273_Iphone-15-Plus (1).webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0650cd26af1cd95b29bc0",
+    "name": "iPhone 15 Pro Max",
+    "fullName": "Apple iPhone 15 Pro Max",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119273100_Iphone-15-Pro-595x595 (1).webp",
+    "isActive": true
+  },
+  {
+    "id": "69a06560d26af1cd95b29bf0",
+    "name": "iPhone 16",
+    "fullName": "Apple iPhone 16",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119388665_iPhone_16_White_PDP_Image_Position_1__ESES_9e413317-97f7-4fec-b67d-61066c3605d2-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0658cd26af1cd95b29c20",
+    "name": "iPhone 16 Plus",
+    "fullName": "Apple iPhone 16 Plus",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119426232_iPhone_16_White_PDP_Image_Position_1__ESES_9e413317-97f7-4fec-b67d-61066c3605d2-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a065d6d26af1cd95b29c63",
+    "name": "iPhone 16 Pro",
+    "fullName": "Apple iPhone 16 Pro",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119508387_iPhone_16_Pro_Max_Desert_Titanium_PDP_Image_Position_1__en-WW_90917597-6891-414c-91cd-68b6c661bb19-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a06627d26af1cd95b29c93",
+    "name": "iPhone 16 Pro Max",
+    "fullName": "Apple iPhone 16 Pro Max",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119550813_iPhone_16_Pro_Max_Desert_Titanium_PDP_Image_Position_1__en-WW_90917597-6891-414c-91cd-68b6c661bb19-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a06656d26af1cd95b29cc3",
+    "name": "iPhone 17",
+    "fullName": "Apple iPhone 17",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119627084_a0230a04-68dd-4534-aa03-7819d13508bd.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0667dd26af1cd95b29cf3",
+    "name": "iPhone 17 Pro",
+    "fullName": "Apple iPhone 17 Pro",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119657556_Apple_iPhone_17_Pro_cosmic_orange-full-product-front-600-1-595x992.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a066b5d26af1cd95b29d23",
+    "name": "iPhone 17 Pro Max",
+    "fullName": "Apple iPhone 17 Pro Max",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119722497_Apple_iPhone_17_Pro_cosmic_orange-full-product-front-600-1-595x992.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a06714d26af1cd95b29d66",
+    "name": "Samsung Galaxy Note 20",
+    "fullName": "Samsung Samsung Galaxy Note 20",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119803415_Samsung-Galaxy-Note-20-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0673cd26af1cd95b29d96",
+    "name": "Samsung Galaxy Note 20 Ultra",
+    "fullName": "Apple Samsung Galaxy Note 20 Ultra",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772119852214_Samsung-Galaxy-Note-20-Ultra-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0691ed26af1cd95b29dcb",
+    "name": "Samsung Galaxy S20",
+    "fullName": "Samsung Samsung Galaxy S20",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772120341134_Samsung-Galaxy-S20-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a06950d26af1cd95b29dfb",
+    "name": "Samsung Galaxy S20 Ultra",
+    "fullName": "Apple Samsung Galaxy S20 Ultra",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772120376134_Samsung-Galaxy-S20-Ultra-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0697bd26af1cd95b29e2b",
+    "name": "Samsung Galaxy S21 5G",
+    "fullName": "Apple Samsung Galaxy S21 5G",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772120439928_Samsung-Galaxy-S21-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a069bfd26af1cd95b29e5b",
+    "name": "Samsung Galaxy S21 FE 5G",
+    "fullName": "Apple Samsung Galaxy S21 FE 5G",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772120486274_Samsung-Galaxy-S21-595x595 (1).webp",
+    "isActive": true
+  },
+  {
+    "id": "69a06a07d26af1cd95b29e9e",
+    "name": "Samsung Galaxy S21 Plus",
+    "fullName": "Samsung Samsung Galaxy S21 Plus",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772120563227_Samsung-Galaxy-S21-1.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0714ad26af1cd95b29ffd",
+    "name": "Samsung Galaxy S21 Ultra",
+    "fullName": "Samsung Samsung Galaxy S21 Ultra",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772122411826_Samsung-Galaxy-S21-Ultra.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a07f87d26af1cd95b2a060",
+    "name": "Samsung Galaxy S22",
+    "fullName": "Samsung Samsung Galaxy S22",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126082214_Samsung-Galaxy-S22.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a07facd26af1cd95b2a090",
+    "name": "Samsung Galaxy S22 Plus",
+    "fullName": "Apple Samsung Galaxy S22 Plus",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126121745_Samsung-Galaxy-S22-1-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a07fd6d26af1cd95b2a0c0",
+    "name": "Samsung Galaxy S22 Ultra",
+    "fullName": "Samsung Samsung Galaxy S22 Ultra",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126162645_Samsung-Galaxy-S22-Ultra.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a08068d26af1cd95b2a0f6",
+    "name": "Samsung Galaxy S23 FE",
+    "fullName": "Samsung Samsung Galaxy S23 FE",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126284480_Samsung Galaxy S23 FE.png",
+    "isActive": true
+  },
+  {
+    "id": "69a080a8d26af1cd95b2a126",
+    "name": "Samsung Galaxy S23 Plus",
+    "fullName": "Samsung Samsung Galaxy S23 Plus",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126355109_Samsung-Galaxy-S23-1-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a080e5d26af1cd95b2a156",
+    "name": "Samsung Galaxy S23 Ultra",
+    "fullName": "Samsung Samsung Galaxy S23 Ultra",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126397081_Samsung-Galaxy-S23-Ultra.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0811bd26af1cd95b2a186",
+    "name": "Samsung Galaxy S24",
+    "fullName": "Samsung Samsung Galaxy S24",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126487506_s24-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a08147d26af1cd95b2a1b6",
+    "name": "Samsung Galaxy S24 FE",
+    "fullName": "Samsung Samsung Galaxy S24 FE",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126530331_Samsung Galaxy S23 FE.png",
+    "isActive": true
+  },
+  {
+    "id": "69a08174d26af1cd95b2a1e6",
+    "name": "Samsung Galaxy S24 Plus",
+    "fullName": "Samsung Samsung Galaxy S24 Plus",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126553785_Samsung-Galaxy-S24-1-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a08201d26af1cd95b2a23c",
+    "name": "Samsung Galaxy S24 Ultra",
+    "fullName": "Samsung Samsung Galaxy S24 Ultra",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126623845_Samsung-Galaxy-S24-Ultra-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0823ed26af1cd95b2a27d",
+    "name": "Samsung Galaxy S25",
+    "fullName": "Samsung Samsung Galaxy S25",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126775674_3d14ff49-c95a-4f93-a150-8412d0239222.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0826bd26af1cd95b2a2ad",
+    "name": "Samsung Galaxy S25 Edge",
+    "fullName": "Samsung Samsung Galaxy S25 Edge",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126823377_30626c7d-5c8b-4d6b-bcfd-95f887f7854d.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0828ed26af1cd95b2a2dd",
+    "name": "Samsung Galaxy Z Flip 4",
+    "fullName": "Apple Samsung Galaxy Z Flip 4",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126843257_Samsung-Galaxy-Z-Flip4-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a082f2d26af1cd95b2a338",
+    "name": "Samsung Galaxy Z Flip 5",
+    "fullName": "Samsung Samsung Galaxy Z Flip 5",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126930125_Samsung-Galaxy-Z-Flip5-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a08318d26af1cd95b2a397",
+    "name": "Samsung Galaxy Z Flip 6",
+    "fullName": "Apple Samsung Galaxy Z Flip 6",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772126977223_Samsung-Galaxy-Z-Flip5-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a08371d26af1cd95b2a3cb",
+    "name": "Samsung Galaxy Z Fold 4",
+    "fullName": "Samsung Samsung Galaxy Z Fold 4",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772127044963_Samsung-Galaxy-Z-Fold4-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a0839dd26af1cd95b2a3fb",
+    "name": "Samsung Galaxy Z Fold 5",
+    "fullName": "Samsung Samsung Galaxy Z Fold 5",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772127129963_Samsung-Galaxy-Z-Fold5-595x595.webp",
+    "isActive": true
+  },
+  {
+    "id": "69a083dbd26af1cd95b2a42b",
+    "name": "Samsung Galaxy Z Fold 6",
+    "fullName": "Samsung Samsung Galaxy Z Fold 6",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "imageUrl": "https://zennara-storage.s3.ap-south-1.amazonaws.com/devices/1772127175384_Color_Selection_CraftedBlack_MO.png",
+    "isActive": true
+  }
+]

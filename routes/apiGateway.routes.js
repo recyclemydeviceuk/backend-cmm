@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const { createExternalOrder, testEndpoint } = require('../controllers/apiGatewayController');
-const ipWhitelist = require('../middleware/ipWhitelist');
 const { gatewayLimiter } = require('../middleware/rateLimiter');
 const { validate } = require('../middleware/validator');
 const { body } = require('express-validator');
+const partnerAuth = require('../middleware/partnerAuth');
 
 /**
  * @route   POST /api/gateway/decisiontech
@@ -13,8 +13,8 @@ const { body } = require('express-validator');
  */
 router.post(
   '/decisiontech',
-  ipWhitelist,
   gatewayLimiter,
+  partnerAuth,
   [
     body('customer_name').notEmpty().trim().withMessage('Customer name is required'),
     body('customer_phone').notEmpty().trim().withMessage('Customer phone is required'),
@@ -34,13 +34,13 @@ router.post(
  * @desc    Test API endpoint
  * @access  IP Whitelisted
  */
-router.post('/test', ipWhitelist, testEndpoint);
+router.post('/test', testEndpoint);
 
 /**
  * @route   GET /api/gateway/test
  * @desc    Test API endpoint (GET)
  * @access  IP Whitelisted
  */
-router.get('/test', ipWhitelist, testEndpoint);
+router.get('/test', testEndpoint);
 
 module.exports = router;

@@ -8,13 +8,13 @@ const deviceRoutes = require('./device.routes');
 const pricingRoutes = require('./pricing.routes');
 const utilityRoutes = require('./utility.routes');
 const apiGatewayRoutes = require('./apiGateway.routes');
-const ipWhitelistRoutes = require('./ipWhitelist.routes');
 const apiLogRoutes = require('./apiLog.routes');
 const dashboardRoutes = require('./dashboard.routes');
 const contactRoutes = require('./contact.routes');
 const uploadRoutes = require('./upload.routes');
 const exportRoutes = require('./export.routes');
 const counterOfferRoutes = require('./counterOffer.routes');
+const partnerRoutes = require('./partner.routes');
 
 // Mount routes
 router.use('/auth', authRoutes);
@@ -23,13 +23,13 @@ router.use('/devices', deviceRoutes);
 router.use('/pricing', pricingRoutes);
 router.use('/utilities', utilityRoutes);
 router.use('/gateway', apiGatewayRoutes);
-router.use('/ip-whitelist', ipWhitelistRoutes);
 router.use('/api-logs', apiLogRoutes);
 router.use('/dashboard', dashboardRoutes);
 router.use('/contact', contactRoutes);
 router.use('/upload', uploadRoutes);
 router.use('/export', exportRoutes);
 router.use('/counter-offers', counterOfferRoutes);
+router.use('/partners', partnerRoutes);
 
 // Health check route
 router.get('/health', (req, res) => {
@@ -53,13 +53,13 @@ router.get('/', (req, res) => {
       pricing: '/api/pricing',
       utilities: '/api/utilities',
       gateway: '/api/gateway',
-      ipWhitelist: '/api/ip-whitelist',
       apiLogs: '/api/api-logs',
       dashboard: '/api/dashboard',
       contact: '/api/contact',
       upload: '/api/upload',
       counterOffers: '/api/counter-offers',
       export: '/api/export',
+      partners: '/api/partners',
     },
   });
 });

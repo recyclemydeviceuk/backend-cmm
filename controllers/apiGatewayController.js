@@ -1,6 +1,6 @@
 const Order = require('../models/Order');
 const ApiLog = require('../models/ApiLog');
-const IpWhitelist = require('../models/IpWhitelist');
+const Partner = require('../models/Partner');
 const Device = require('../models/Device');
 const Pricing = require('../models/Pricing');
 const { HTTP_STATUS, ERROR_MESSAGES, ORDER_STATUSES } = require('../config/constants');
@@ -123,7 +123,7 @@ exports.createExternalOrder = async (req, res) => {
     const orderData = {
       orderNumber: await generateOrderNumber(),
       source: 'API',
-      status: 'PENDING', // Uses first status from order status utilities
+      status: 'PENDING',
       customerName: customer_name,
       customerPhone: customer_phone,
       customerEmail: customer_email || '',
@@ -142,6 +142,7 @@ exports.createExternalOrder = async (req, res) => {
         sortCode: sort_code || '',
       },
       transactionId: transaction_id || '',
+      partnerName: req.partner ? req.partner.name : null,
     };
 
     // Only set deviceId if it's a valid MongoDB ObjectId
@@ -150,6 +151,11 @@ exports.createExternalOrder = async (req, res) => {
     }
 
     const order = await Order.create(orderData);
+
+    // Increment partner order count
+    if (req.partner) {
+      Partner.findByIdAndUpdate(req.partner._id, { $inc: { totalOrders: 1 } }).exec();
+    }
 
     // Send confirmation email if email provided
     if (customer_email) {

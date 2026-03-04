@@ -58,7 +58,7 @@ router.get('/all', getAllUtilities);
 
 // Storage Options Routes
 router.get('/storage', getAllStorageOptions);
-router.get('/storage/:id', getStorageOptionById);
+router.get('/storage/:id', auth, getStorageOptionById);
 router.post(
   '/storage',
   auth,
@@ -75,7 +75,7 @@ router.post('/storage/reorder', auth, reorderStorageOptions);
 
 // Device Conditions Routes
 router.get('/conditions', getAllDeviceConditions);
-router.get('/conditions/:id', getDeviceConditionById);
+router.get('/conditions/:id', auth, getDeviceConditionById);
 router.post(
   '/conditions',
   auth,
@@ -92,7 +92,7 @@ router.post('/conditions/reorder', auth, reorderDeviceConditions);
 
 // Networks Routes
 router.get('/networks', getAllNetworks);
-router.get('/networks/:id', getNetworkById);
+router.get('/networks/:id', auth, getNetworkById);
 router.post(
   '/networks',
   auth,
@@ -109,7 +109,7 @@ router.post('/networks/reorder', auth, reorderNetworks);
 
 // Brands Routes
 router.get('/brands', getAllBrands);
-router.get('/brands/:id', getBrandById);
+router.get('/brands/:id', auth, getBrandById);
 router.post(
   '/brands',
   auth,
@@ -123,7 +123,7 @@ router.post('/brands/reorder', auth, reorderBrands);
 
 // Categories Routes
 router.get('/categories', getAllCategories);
-router.get('/categories/:id', getCategoryById);
+router.get('/categories/:id', auth, getCategoryById);
 router.post(
   '/categories',
   auth,
@@ -136,8 +136,8 @@ router.delete('/categories/:id', auth, deleteCategory);
 router.post('/categories/reorder', auth, reorderCategories);
 
 // Order Statuses Routes
-router.get('/order-statuses', getAllOrderStatuses);
-router.get('/order-statuses/:id', getOrderStatusById);
+router.get('/order-statuses', auth, getAllOrderStatuses);
+router.get('/order-statuses/:id', auth, getOrderStatusById);
 router.post(
   '/order-statuses',
   auth,
@@ -151,8 +151,8 @@ router.delete('/order-statuses/:id', auth, deleteOrderStatus);
 router.post('/order-statuses/reorder', auth, reorderOrderStatuses);
 
 // Payment Statuses Routes
-router.get('/payment-statuses', getAllPaymentStatuses);
-router.get('/payment-statuses/:id', getPaymentStatusById);
+router.get('/payment-statuses', auth, getAllPaymentStatuses);
+router.get('/payment-statuses/:id', auth, getPaymentStatusById);
 router.post(
   '/payment-statuses',
   auth,
