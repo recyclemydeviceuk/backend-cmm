@@ -54,31 +54,24 @@ app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'"],
-      scriptSrc: ["'self'"],
-      imgSrc: ["'self'", 'data:', 'https:'],
+      styleSrc: ["'self'", "'unsafe-inline'", 'https:'],
+      scriptSrc: ["'self'", "'unsafe-inline'", 'https:'],
+      imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
+      connectSrc: ["'self'", 'https:', 'http:'],
+      fontSrc: ["'self'", 'https:', 'data:'],
+      mediaSrc: ["'self'", 'https:'],
+      frameSrc: ["'none'"],
     },
   },
   crossOriginEmbedderPolicy: false,
+  crossOriginResourcePolicy: { policy: 'cross-origin' },
 }));
 
 /**
  * CORS Configuration
  */
 const corsOptions = {
-  origin: (origin, callback) => {
-    const allowedOrigins = CORS_ORIGIN.split(',').map(o => o.trim());
-    
-    // Allow requests with no origin (mobile apps, Postman, etc.)
-    if (!origin) return callback(null, true);
-    
-    if (allowedOrigins.indexOf(origin) !== -1 || allowedOrigins.includes('*')) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
+  origin: '*',
   optionsSuccessStatus: 200,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'X-Partner-Key'],
@@ -86,13 +79,15 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+app.options('*', cors(corsOptions));
+
 /**
  * Body Parser Middleware
  */
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-/**
+/** 
  * Request Logging Middleware
  */
 if (NODE_ENV === 'development') {
